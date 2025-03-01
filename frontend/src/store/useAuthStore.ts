@@ -4,7 +4,8 @@ import { AxiosError } from "axios";
 import toast from "react-hot-toast";
 import { io } from "socket.io-client";
 
-const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:3000" : "/";
+// const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:3000" : "/";
+const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:3000" : "https://talkify-by-sp.onrender.com";
 
 interface AuthState {
     authUser: any | null,
