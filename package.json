@@ -1,0 +1,13 @@
+{
+  "name": "7-chat-app",
+  "version": "1.0.0",
+  "description": "This project is a Realtime chat app, which is being developed using MERN, Typescript and Socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run dev"
+  },
+  "author": "",
+  "license": "ISC"
+}
