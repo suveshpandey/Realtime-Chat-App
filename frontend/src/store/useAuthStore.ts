@@ -86,7 +86,7 @@ export const useAuthStore = create<AuthState> ((set, get) => ({
 
     verifyEmail: async (email: string, verificationCode: string) => {
         try{
-            const res = await axiosInstance.put("./auth/verify-email", {
+            const res = await axiosInstance.put("/auth/verify-email", {
                 email,
                 verificationCode
             });
@@ -149,7 +149,7 @@ export const useAuthStore = create<AuthState> ((set, get) => ({
     updateProfile: async (data: UpdateProfileData) => {
         set({IsUpdatingProfile: true});
         try{
-            const res = await axiosInstance.put("auth/update-profile", data);
+            const res = await axiosInstance.put("/auth/update-profile", data);
             set({authUser: res.data.authUser});
             toast.success("Profile updated successfully");
         }
